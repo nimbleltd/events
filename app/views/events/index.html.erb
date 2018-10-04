@@ -1,0 +1,14 @@
+<h1><%= pluralize(@events.size, 'Event')%></h1>
+
+<ul>
+  <% @events.each do |event| %>
+    <li><%= event.name %></li>
+  <% end %>
+</ul>
+
+# <% @events.each do |event| %>
+#     <li><%= @events.first.location %></li>
+#     <li><%= @events.first.description[0..10] %></li>
+#     <li><%= @events.first.starts_at %></li>
+#     <li><%= number_to_currency(@events.first.price) %></li>
+# <% end %>
