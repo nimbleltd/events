@@ -2,13 +2,15 @@
 
 <ul>
   <% @events.each do |event| %>
-    <li><%= event.name %></li>
+    <li><%= link_to(event.name, event) %></li>
   <% end %>
 </ul>
 
-# <% @events.each do |event| %>
-#     <li><%= @events.first.location %></li>
-#     <li><%= @events.first.description[0..10] %></li>
-#     <li><%= @events.first.starts_at %></li>
-#     <li><%= number_to_currency(@events.first.price) %></li>
-# <% end %>
+<% @events.each do |event| %>
+    <li><%= @events.first.location %></li>
+    <li><%= @events.first.description[0..10] %></li>
+    <li><%= @events.first.starts_at %></li>
+    <li><%= number_to_currency(@events.first.price) %></li>
+<% end %>
+
+<%= link_to "All Events", root_path%>
