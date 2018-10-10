@@ -1,16 +1,23 @@
 <h1><%= pluralize(@events.size, 'Event')%></h1>
 
-<ul>
   <% @events.each do |event| %>
-    <li><%= link_to(event.name, event) %></li>
+    <article>
+      <header>
+        <h2><%= link_to(event.name, event) %></h2>
+      </header>
+      <table>
+      <tr>
+        <th>When:</th>
+        <td><%= event.starts_at.strftime("%A, %b %d at %I:%M %p") %></td>
+      </tr>
+      <tr>
+        <th>Where:</th>
+        <td><%= event.location %></td>
+      </tr>
+      <tr>
+        <th>Price:</th>
+        <td><strong><%= number_to_currency(@events.first.price)%></strong></td>
+      </tr>
+    </table>
+    </article>
   <% end %>
-</ul>
-
-<% @events.each do |event| %>
-    <li><%= @events.first.location %></li>
-    <li><%= @events.first.description[0..10] %></li>
-    <li><%= @events.first.starts_at %></li>
-    <li><%= number_to_currency(@events.first.price) %></li>
-<% end %>
-
-<%= link_to "All Events", root_path%>
