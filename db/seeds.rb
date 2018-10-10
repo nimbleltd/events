@@ -10,14 +10,14 @@ Event.create!([
   {
     name: "BugSmash",
     location: "Denver",
-    price: 10.00,
+    price: 0.00,
     description: "A night of smashing the bugs",
     starts_at: 10.days.from_now
   },
   {
     name: "Hackathon",
     location: "Austin",
-    price: 40.00,
+    price: 15.00,
     description: "Hunker down for a Hackathon Hoedown",
     starts_at: 21.days.from_now
   },

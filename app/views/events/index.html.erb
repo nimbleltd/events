@@ -5,10 +5,13 @@
       <header>
         <h2><%= link_to(event.name, event) %></h2>
       </header>
+      <p> 
+        <%= event.description[0..10] %>...
+      </p>
       <table>
       <tr>
         <th>When:</th>
-        <td><%= event.starts_at.strftime("%A, %b %d at %I:%M %p") %></td>
+        <td><%= event.starts_at %></td>
       </tr>
       <tr>
         <th>Where:</th>
@@ -16,7 +19,7 @@
       </tr>
       <tr>
         <th>Price:</th>
-        <td><strong><%= number_to_currency(@events.first.price)%></strong></td>
+        <td><strong><%= format_price(event) %></strong></td>
       </tr>
     </table>
     </article>

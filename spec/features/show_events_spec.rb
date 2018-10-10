@@ -25,6 +25,6 @@ describe "Viewing the list of events" do
 
     visit event_url(event)
 
-    expect(page).to have_text("Free")
+    expect(page).to have_text("FREE!")
   end
 end
