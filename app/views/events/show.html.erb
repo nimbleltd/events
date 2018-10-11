@@ -8,19 +8,20 @@
     <%= @event.description %> 
   </p>
   <table>
-      <tr>
-        <th>When:</th>
-        <td><%= @event.starts_at %></td>
-      </tr>
-      <tr>
-        <th>Where:</th>
-        <td><%= @event.location %></td>
-      </tr>
-      <tr>
-        <th>Price:</th>
-        <td><strong><%= format_price(@event) %></strong></td>
-      </tr>
-    </table>
-<p>
-<%= link_to "All Events", root_path%>
-</p>
+    <tr>
+      <th>When:</th>
+      <td><%= @event.starts_at %></td>
+    </tr>
+    <tr>
+      <th>Where:</th>
+      <td><%= @event.location %></td>
+    </tr>
+    <tr>
+      <th>Price:</th>
+      <td><strong><%= format_price(@event) %></strong></td>
+    </tr>
+  </table>
+    <p>
+      <%= link_to "All Events", root_path%>
+    </p>
+</article>
