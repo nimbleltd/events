@@ -1,7 +1,7 @@
 <%= form_for(@event) do |f| %>
   <p>
     <%= f.label :name %><br>
-    <%= f.text_field :name %><br><br>
+    <%= f.text_field :name, autofocus: true %><br><br>
 
     <%= f.label :starts_at %><br>
     <%= f.datetime_select :starts_at %><br><br>
@@ -15,7 +15,7 @@
     <%= f.label :price %><br>
     <%= f.number_field :price %><br><br>
 
-    <%= f.submit %><br><br>
+    <%= f.submit %> | <%= link_to 'Cancel', events_path %><br><br>
 
   </p>
 <% end %>
