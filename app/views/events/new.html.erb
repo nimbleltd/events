@@ -1,23 +1,7 @@
 <h1>Add New Event</h1>
 
-<%= form_for(@event) do |f| %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %><br><br>
+<%= render 'form' %>
 
-    <%= f.label :starts_at %><br>
-    <%= f.datetime_select :starts_at %><br><br>
-
-    <%= f.label :description %><br>
-    <%= f.text_area :description, cols:40, rows:7 %><br><br>
-
-    <%= f.label :location %><br>
-    <%= f.text_field :location %><br><br>
-
-    <%= f.label :price %><br>
-    <%= f.number_field :price %><br><br>
-
-    <%= f.submit %><br><br>
-
-  </p>
-<% end %>
+<p>
+  <%= link_to "All Events", root_path%>
+</p>  
