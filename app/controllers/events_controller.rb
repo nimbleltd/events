@@ -43,7 +43,9 @@ private
                     :description,
                     :location,
                     :price,
-                    :starts_at
+                    :starts_at,
+                    :image_file_name,
+                    :capacity
                       )
   end
 
