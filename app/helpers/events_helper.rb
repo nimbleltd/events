@@ -17,6 +17,6 @@ module EventsHelper
 
   def current_class?(active_path)
     return 'active' if request.path == active_path
-    '' # is this 'else return blank'?
+    ''  # not needed why is this here?
   end
 end
