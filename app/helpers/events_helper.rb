@@ -14,4 +14,9 @@ module EventsHelper
       image_tag event.image_file_name
     end
   end
+
+  def current_class?(active_path)
+    return 'active' if request.path == active_path
+    '' # is this 'else return blank'?
+  end
 end
