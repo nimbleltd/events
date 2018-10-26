@@ -13,6 +13,8 @@ class Event < ApplicationRecord
     message: "must be an image of type: gif|jpg|png"
   }
 
+  has_many :registrations, dependent: :destroy
+
   def free?
     price.blank? || price.zero?
     # true
