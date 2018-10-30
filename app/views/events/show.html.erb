@@ -7,6 +7,9 @@
     <h3>Capacity:</h3>
     <h3><%= pluralize(@event.capacity, 'spot' )%> </h3>
   </header>
+  <p>
+    <%= link_to "Who's registred?", event_registrations_path(@event)%>
+  </p>
   <p> 
     <%= @event.description %> 
   </p>
@@ -24,6 +27,9 @@
       <td><strong><%= format_price(@event) %></strong></td>
     </tr>
   </table>
+    <p>
+       <%= link_to "Register!", new_event_registration_path(@event), class: "button ok register" %>
+    </p>
     <p>
       <%= link_to "Edit Event", edit_event_path%>
     </p>
