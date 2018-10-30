@@ -28,8 +28,12 @@
     </tr>
   </table>
     <p>
-       <%= link_to "Register!", new_event_registration_path(@event), class: "button ok register" %>
+     <%= register_link(@event) %>
     </p>
+    <p>
+      (<%= pluralize(@event.spots_left, 'spot')%> available)
+    </p>
+      
     <p>
       <%= link_to "Edit Event", edit_event_path%>
     </p>
